@@ -8,37 +8,117 @@
 		<link href="css/header.css" rel="stylesheet">
 		<link href="css/mainBody.css" rel="stylesheet">
 		<link href="css/sections.css" rel="stylesheet">
+		<link href="css/section1.css" rel="stylesheet">
+		<link href="css/section2.css" rel="stylesheet">
 		<link href="css/navbar.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>		 
 		<script type = "text/javascript" src="js/main.js"></script> 
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
 		<link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
 	</head>
 	<body>
 	<div class="header">
-	<img id="logo" src="./images/logo.png"/> <span id="title">Coffee <span id="title2"> Break</span></span> <br>
-		<span id="slogan"> We turn coffee</span> <span id="slogan2">into beautiful sites. </span>
+	<div id="logoContainer">
+		<img id="logo" src="./images/logo.png"/> <span id="title">Coffee <br> <span id="title2"> Break</span></span>
+	</div>
+	<div id="sloganContainer">
+		<span id="slogan"> We turn coffee and time</span> <br>
+		<span id="slogan2">into a site that works fine. </span>
+	</div>
 	</div>
 	<div class="mainBody">
 		<div id="navbar">
-			<div class="sectionSymbol" id="sectionSymbol1" onclick="goToByScroll('section1')"> <img src="./images/xicon1.png"/> </div>
-			<div class="sectionSymbol" id="sectionSymbol2" onclick="goToByScroll('section2')"> <img src="./images/xicon2.png"/> </div>
-			<div class="sectionSymbol" id="sectionSymbol3" onclick="goToByScroll('section3')"> <img src="./images/xicon3.png"/> </div>
+			<div class="sectionSymbol" id="sectionSymbol1Nav" onclick="goToByScroll('section1' , this.id)">
+				<img src="./images/xicon1.png"/>
+			</div>
+			<div class="sectionSymbol" id="sectionSymbol2Nav" onclick="goToByScroll('section2' , this.id)">
+				<img src="./images/xicon2.png"/>
+			</div>
+			<div class="sectionSymbol" id="sectionSymbol3Nav" onclick="goToByScroll('section3' , this.id)">
+				<img src="./images/xicon3.png"/>
+			</div>
 		</div> 
 
 		<div class="middleColumn">
 			<div class="section" id="section1">
-				<div class="sectionSymbol" id="sectionSymbol1"> <img src="./images/icon1.png"/> </div>
+				<div class="sectionSymbol" id="sectionSymbol1" onclick="toggleHeight('section1' , this.id)">
+					<img src="./images/icon1.png"/>
+				</div>
+				<div class="sectionContent">
+					<span class="sectionTitle">Past Work: </span>
+					<div id="sectionContent1">
+						 <div class="project">
+							<a href=""><img src="./images/susProject.png"/> </a>
+							<span style="text-decoration: underline;"> System Usability Scale </span>
+							<ul>
+								<li>A SUS for your site with animated 3D Graphs!</li>
+								<li> Constructed in 4 days </li>
+								<li id="date"> 2/07/17 </li>
+							</ul>
+						</div>
+						<div class="project">
+							<a href=""><img src="./images/weatherProject.png"/> </a>
+							<span style="text-decoration: underline;"> Weather WebApp </span>
+							<ul>
+								<li>Animated weather data. Built with openWeather API</li>
+								<li> Constructed in 3 days </li>
+								<li id="date"> 25/06/17 </li>
+							</ul>
+						</div>
+							<div class="project">
+								<a href=""><img src="./images/pizzaProject.png"/> </a>
+								<span style="text-decoration: underline;"> EasyPeasy Pizza </span>
+								<ul>
+									<li>Pizza restaurante website, which allows making your own pizza!</li>
+									<li> Constructed in 5 days </li>
+									<li id="date"> 19/06/17 </li>
+								</ul>
+							</div>
+						<div class="project">
+							<a href=""><img src="./images/browserProject.png"/> </a>
+							<span style="text-decoration: underline;"> Simple Image Browser </span>
+							<ul>
+								<li>An elegant image Browser</li>
+								<li> Constructed in 2 days </li>
+								<li id="date"> 01/06/17 </li>
+							</ul>
+						</div>
+						<div class="project">
+							<a href=""><img src="./images/todolistProject.png"/> </a>
+							<span style="text-decoration: underline;">Todo list</span>
+							<ul>
+								<li>Animated todo list</li>
+								<li> Constructed in 3 days </li>
+								<li id="date"> 24/05/17 </li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="section" id="section2">
-				<div class="sectionSymbol" id="sectionSymbol2"> <img src="./images/icon2.png"/> </div>
+				<div class="sectionSymbol" id="sectionSymbol2" onclick="toggleHeight('section2' , this.id)">
+					<img src="./images/icon2.png"/>
+				</div>
+				<div class="sectionContent">
+					<div id="sectionContent2">	
+						
+					</div>
+				</div>
 			</div>
 			<div class="section" id="section3">
-				<div class="sectionSymbol" id="sectionSymbol3"> <img src="./images/icon3.png"/> </div>
+				<div class="sectionSymbol" id="sectionSymbol3" onclick="toggleHeight('section3' , this.id)">
+					<img src="./images/icon3.png"/>
+				</div>
+				<div class="sectionContent">
+					<div id="sectionContent3">	
+					</div>
+				</div>
 			</div>
 		</div>
 
 	</div>
+		<audio id='coffePour' src="sounds/coffeePour.mp3"/>
 	</body>
 </html>
