@@ -1,5 +1,6 @@
 $(document).ready(function()
 {
+	$('#sectionSymbol1Nav img').css('opacity' , '0.8');
 	var screenMiddle = Math.floor(window.innerHeight/2);
 	//According to where the middle of the screen is, we highlight in the navbar the correct icon.
 	$(window).scroll(function()
