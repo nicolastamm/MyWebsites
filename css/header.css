@@ -17,11 +17,11 @@
 	#logo
 	{
 		position: relative;
-		top: 39px;
-		left: 32px;
+		top: 49px;
+		left: 26px;
 		height: 80px;
 		width: 55px;
-		filter: invert(70%);
+		filter: invert(80%);
 	}
 	#title
 	{
@@ -35,21 +35,24 @@
 	{
 		position:relative;
 		color:#00BFFF;
-		right: 162px;
-		top: 53px;
+		left: 49px;
+		bottom: 27px;
+
+	}
+	#sloganContainer
+	{
+		position: absolute;
+		left: 67%;
+		bottom: 10%;
+		text-align: left;
+		line-height: 15px;
 
 	}
 	#slogan , #slogan2
 	{ 
 		font-family:"Anton";
 		position: relative;
-		bottom: 17px;
 		color:#ddd;
 		font-size: 70%;
-		left: 179px;
+		text-align: left;
 	}
-		#slogan2
-		{
-			left: 80px;
-			top: 0px;
-		}

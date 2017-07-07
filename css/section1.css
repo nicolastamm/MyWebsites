@@ -1,0 +1,29 @@
+#sectionContent1
+{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px auto;
+}
+#sectionContent1 .project 
+{
+
+	flex: 1 0 500px;
+	align-items: center;
+	max-width: 500px;
+	box-sizing: border-box;
+	background: #111111;
+	padding: 10px;
+	margin: 20px auto;
+}
+#sectionContent1 .project a img
+{
+	float: left;
+	width: 250px;
+	height: 250px;
+	filter: grayscale(75%);
+	padding-right: 10px;
+}
+#date
+{
+	color: #999;
+}

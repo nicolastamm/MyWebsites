@@ -2,19 +2,19 @@
 {
 	background-color: #222222;
 	width: 100%;
-	height: 100px;
 	margin-top: 30px;
 	margin-bottom: 30px;
 	border-radius: 30px;
-	cursor: pointer;
+	min-height: 100px;
 }
 	.sectionSymbol
 	{
 		background-size: 60% 60%; 
-		margin: 0 auto;
-		width: 100px;
-		height: 100px;
+		margin: 20px auto 20px;
+		width: 80px;
+		height: 80px;
 		border-radius: 50%;
+		cursor: pointer;
 	}
 		.sectionSymbol img
 		{
@@ -23,15 +23,38 @@
 			opacity: 0.3;
 			margin: 15%;
 		}
-	#sectionSymbol1
+	#sectionSymbol1 , #sectionSymbol2 , #sectionSymbol3 ,
+	#sectionSymbol1Nav , #sectionSymbol2Nav , #sectionSymbol3Nav
 	{
-		background: #CC8733 ;
+		position: relative;
+		top: 10px
 	}
+	#sectionSymbol1 
+	{
+		background: #654217 ;
+	}
+		#sectionSymbol1 img , #sectionSymbol1Nav img
+		{
+			position: relative;
+			top: 3px;
+		}
 	#sectionSymbol2
 	{
-		background: #33A6CC ;
+		background: #175165 ;
 	}
 	#sectionSymbol3
 	{
-		background: #2B882B;
+		background: #265626;
+	}
+	.sectionContent
+	{
+		display:none;
+		width: 100%;
+	}
+	.sectionTitle
+	{
+		width: 100%;
+		text-align: center;
+		display: block;
+		font-size: 200%;
 	}

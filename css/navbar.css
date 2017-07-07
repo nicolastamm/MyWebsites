@@ -1,11 +1,12 @@
-#navbar {
+#navbar
+{
 	position: fixed;
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100px;
     background-color: #222222;
-	border-radius: 30px;
+	border-radius:  0px 30px 30px 0px;
 	cursor: pointer;
 }
 	#navbar .sectionSymbol
@@ -21,16 +22,9 @@
 			width: 70%;
 			height: 70%;
 			margin: 15%;
+			opacity: 0.3;
 		}
-	#navbar #sectionSymbol1
+	#navbar #sectionSymbol1Nav , 	#navbar #sectionSymbol2Nav ,	#navbar #sectionSymbol3Nav
 	{
-		background: #222222;
-	}
-	#navbar #sectionSymbol2
-	{
-		background: #222222;
-	}
-	#navbar #sectionSymbol3
-	{
-		background: #222222;
+		background: rgba(255,255,255,0.0);
 	}

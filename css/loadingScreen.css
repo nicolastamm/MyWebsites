@@ -1,0 +1,40 @@
+
+.loadingScreen
+{
+	position:fixed;
+	background-color: #222222;
+	height: 120%;
+	top: -20%;
+	width: 100%;
+	z-index: 10;
+	margin: 0;
+	padding: 0;
+}
+.loadingScreen #logoContainer
+{
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+.loadingScreen #logoContainer #logo
+{
+	left:225px;
+	background-color: #222222;
+}
+.loadingScreen #logoContainer #logo::before
+{
+  content: ' ';
+  position: absolute;
+  background: #CCCCCC;
+  width: 100%;
+  bottom: 0;
+	animation: wipe 5s cubic-bezier(.2,.6,.8,.4) forwards;
+}
+@keyframes wipe
+{
+  0% {height: 0;}
+  100%{height: 100%;}
+}
