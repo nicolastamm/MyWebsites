@@ -1,42 +1,41 @@
 $(document).ready(function()
 {
-	$('#sectionSymbol1Nav img').css('opacity' , '0.8');
-	var screenMiddle = Math.floor(window.innerHeight/2);
-	//According to where the middle of the screen is, we highlight in the navbar the correct icon.
-	$(window).scroll(function()
-	{
-		var top2 = $('#section2').offset().top;        // 'above top 2'=='between top1 & bot1'
-		var bottom2 = top2 + $('#section2').outerHeight(); // 'below is bot 2'=='between top3 & bot3' 
-		currentY = $(this).scrollTop() + screenMiddle;
-
-		if(currentY < top2)
-		{
-			$('#sectionSymbol1Nav img').css('opacity' , '0.8');
-			$('#sectionSymbol2Nav img').css('opacity' , '0.3');
-			$('#sectionSymbol3Nav img').css('opacity' , '0.3');
-		}	
-		else if (currentY > bottom2)
-		{
-			$('#sectionSymbol1Nav img').css('opacity' , '0.3');
-			$('#sectionSymbol2Nav img').css('opacity' , '0.3');
-			$('#sectionSymbol3Nav img').css('opacity' , '0.8');
-		}	
-		else
-		{
-			$('#sectionSymbol1Nav img').css('opacity' , '0.3');
-			$('#sectionSymbol2Nav img').css('opacity' , '0.8');
-			$('#sectionSymbol3Nav img').css('opacity' , '0.3');
-		}
-	});
+	scrollHighlight();
+	$(window).scroll(scrollHighlight);
 });
 
+function scrollHighlight()
+{
+	var screenMiddle = Math.floor(window.innerHeight/2);
+	var top2 = $('#section2').offset().top;             // 'above top 2'=='between top1 & bot1'
+	var bottom2 = top2 + $('#section2').outerHeight(); // 'below is bot 2'=='between top3 & bot3' 
+	currentY = $(this).scrollTop() + screenMiddle;    // Thus, we dont need top1,3 nor bot1,3
+	if(currentY < top2)
+	{
+		$('#sectionSymbol1Nav img').css('opacity' , '0.8');
+		$('#sectionSymbol2Nav img').css('opacity' , '0.3');
+		$('#sectionSymbol3Nav img').css('opacity' , '0.3');
+	}	
+	else if (currentY > bottom2)
+	{
+		$('#sectionSymbol1Nav img').css('opacity' , '0.3');
+		$('#sectionSymbol2Nav img').css('opacity' , '0.3');
+		$('#sectionSymbol3Nav img').css('opacity' , '0.8');
+	}	
+	else
+	{
+		$('#sectionSymbol1Nav img').css('opacity' , '0.3');
+		$('#sectionSymbol2Nav img').css('opacity' , '0.8');
+		$('#sectionSymbol3Nav img').css('opacity' , '0.3');
+	}
+}
 function goToByScroll(sectionId , navbarId)
 {
-	var offsetScroll = $("#"+sectionId).offset().top - 20; // looks better w. 20 px on top.
+	var offsetScroll = $("#"+sectionId).offset().top - 20; // looks better w. 20 on top.
 	$('html,body').animate(
 	{
         scrollTop: offsetScroll
-	}, 'slow');
+	}, 'slow' , 'swing');
 }
 // With these variables we note whether .slideToggle() is .slideUp() or .slideDown() .
 var is1collapsed = true;
@@ -97,4 +96,3 @@ function setColor(sectionId)
 	}
 
 }
-
