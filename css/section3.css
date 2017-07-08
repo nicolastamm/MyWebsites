@@ -1,0 +1,63 @@
+#sectionContent3
+{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px auto;
+}
+#sectionContent3 .contact
+{
+	font-family: 'Passion One', cursive;
+	flex: 1 0 500px;
+	align-items: center;
+	max-width: 500px;
+	box-sizing: border-box;
+	background: #111111;
+	padding: 25px;
+	margin: 20px auto;;
+	line-height: 140%;	
+}
+.contact .contactTitle
+{
+	color: #06AA06;
+	font-size: 122%;
+}
+.contact table
+{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	
+}
+.contact table tbody tr
+{
+	margin-bottom: 20px;
+}
+.contact table tbody tr td
+{
+	text-align:center;
+}
+#sendButton
+{
+	margin-top: 30px;
+	background-color: #06AA06;
+	color: white;
+	padding: 10px 20px 10px 20px;
+	float: right;
+	font-family: 'Passion One', cursive;
+	border: 0px solid #111;
+	border-radius: 30px;
+	box-shadow: 0px 5px #102310 ;
+}
+#sendButton:hover{background-color: #046204;}
+#sendButton:active
+{
+	transform: translateY(4px);
+	box-shadow: 0px 1px #102310 ;
+	background-color: #046204;
+}
+@media only screen and (max-width: 720px)
+{
+	#sectionContent3 .contact
+	{max-width: 350px;}
+}
+

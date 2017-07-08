@@ -11,6 +11,29 @@
 	max-width: 500px;
 	box-sizing: border-box;
 	background: #111111;
-	padding: 10px;
-	margin: 20px auto;
+	padding: 40px;
+	margin: 40px auto;
+	text-align: justify;
+	line-height: 100%;	
+}
+.texts .textsTitle
+{
+	font-family: 'Passion One', cursive;
+	color: #069FD2;
+	font-size: 118%;
+}
+
+.texts p
+{
+	text-indent: 1.5em;
+}
+@media only screen and (max-width: 720px)
+{
+	#sectionContent2 .texts
+	{max-width: 400px;}
+}
+@media only screen and (max-width: 480px)
+{
+	#sectionContent2 .texts
+	{max-width: 300px;}
 }

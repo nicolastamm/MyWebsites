@@ -11,7 +11,7 @@
 	align-items: center;
 	max-width: 500px;
 	box-sizing: border-box;
-	background: #111111;
+	background: #131313;
 	padding: 10px;
 	margin: 20px auto;
 }
@@ -22,8 +22,25 @@
 	height: 250px;
 	filter: grayscale(75%);
 	padding-right: 10px;
+	padding-top: 10px;
 }
 #date
 {
 	color: #999;
+	padding-top: 20px;
+}
+.project span
+{
+	font-family: 'Passion One', cursive;
+	color: #D27606;
+	font-size: 118%;
+}
+.project ul li
+{
+	padding-bottom: 15px;
+}
+@media only screen and (max-width: 720px)
+{
+	#sectionContent1 .project 
+	{max-width: 300px;}
 }
