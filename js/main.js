@@ -96,3 +96,11 @@ function setColor(sectionId)
 	}
 
 }
+function sendMail() {
+    var link = "mailto:nicolastamm@hotmail.com.ar"
+             + "&subject=" + escape("Coffee Break Site")
+             + "&body=" + escape(document.getElementById('mailMessage').value)
+    ;
+
+    window.location.href = link;
+}
